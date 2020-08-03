@@ -1,0 +1,138 @@
+{
+   "products": {
+        "televisions": [
+            {
+                "id": "1",
+                "title": "John",
+                "image": "./img/image.jpg",
+                "customerRating": "4",
+                "price": "£100",
+                "url": "url",
+                "screenSize": "big",
+                "resolution": "Good",
+                "brand": "Samsung"
+            },
+            {
+                "id": "2",
+                "title": "Jez",
+                "image": "./img/image.jpg",
+                "customerRating": "4",
+                "price": "£100",
+                "url": "url",
+                "screenSize": "big",
+                "resolution": "Good",
+                "brand": "Samsung"
+            },
+            {
+                "id": "3",
+                "title": "Jeff",
+                "image": "./img/image.jpg",
+                "customerRating": "4",
+                "price": "£100",
+                "url": "url",
+                "screenSize": "big",
+                "resolution": "Good",
+                "brand": "Samsung"
+            },
+            {
+                "id": "4",
+                "title": "NameH",
+                "image": "./img/image.jpg",
+                "customerRating": "4",
+                "price": "£100",
+                "url": "url",
+                "screenSize": "big",
+                "resolution": "Good",
+                "brand": "Samsung"
+            },
+            {
+                "id": "5",
+                "title": "NameH",
+                "image": "./img/image.jpg",
+                "customerRating": "4",
+                "price": "£100",
+                "url": "url",
+                "screenSize": "big",
+                "resolution": "Good",
+                "brand": "Samsung"
+            },
+            {
+                "id": "6",
+                "title": "NameH",
+                "image": "./img/image.jpg",
+                "customerRating": "4",
+                "price": "£100",
+                "url": "url",
+                "screenSize": "big",
+                "resolution": "Good",
+                "brand": "Samsung"
+                },
+                {
+                    "id": "7",
+                    "title": "Name",
+                    "image": "./img/image.jpg",
+                    "customerRating": "4",
+                    "price": "£100",
+                    "url": "url",
+                    "screenSize": "big",
+                    "resolution": "Good",
+                    "brand": "Samsung"
+                },
+                {
+                    "id": "8",
+                    "title": "NameH",
+                    "image": "./img/image.jpg",
+                    "customerRating": "4",
+                    "price": "£100",
+                    "url": "url",
+                    "screenSize": "big",
+                    "resolution": "Good",
+                    "brand": "Samsung"
+                },
+                {
+                    "id": "9",
+                    "title": "NameH",
+                    "image": "./img/image.jpg",
+                    "customerRating": "4",
+                    "price": "£100",
+                    "url": "url",
+                    "screenSize": "big",
+                    "resolution": "Good",
+                    "brand": "Samsung"
+                },
+                {
+                    "id": "10",
+                    "title": "NameH",
+                    "image": "./img/image.jpg",
+                    "customerRating": "4",
+                    "price": "£100",
+                    "url": "url",
+                    "screenSize": "big",
+                    "resolution": "Good",
+                    "brand": "Samsung"
+                },
+                {
+                    "id": "11",
+                    "title": "NameH",
+                    "image": "./img/image.jpg",
+                    "customerRating": "4",
+                    "price": "£100",
+                    "url": "url",
+                    "screenSize": "big",
+                    "resolution": "Good",
+                    "brand": "Samsung"
+                },
+                {
+                    "id": "12",
+                    "title": "NameH",
+                    "image": "./img/image.jpg",
+                    "customerRating": "4",
+                    "price": "£100",
+                    "url": "url",
+                    "screenSize": "big",
+                    "resolution": "Good",
+                    "brand": "Samsung"
+                }
+        ]
+    }
+}

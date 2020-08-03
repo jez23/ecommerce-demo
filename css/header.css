@@ -1,0 +1,147 @@
+header {
+    display: grid;
+    grid-template-columns: repeat(21, 1fr);
+    grid-auto-rows: minmax(40px, auto);
+    margin-bottom: 10px;
+    justify-items: stretch;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+    min-width: 0; 
+    min-height: 0;
+    grid-template-areas: 
+    "logo link link link link search search search search search search search search search search search search account account account account ";
+}
+#header__logo {
+    grid-area: logo;
+    margin-left: 5px;
+    justify-items: center;
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+}
+#header__logo img{
+    height: 70px;
+}
+
+.header__mainNav {
+    display: grid;
+    grid-area: link;
+    align-items: center;
+}
+.header__mainNav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    justify-items: center;
+}
+.header__mainNav ul li{
+    cursor: pointer;
+}
+.header__searchBar {
+    align-items: center;
+    display: grid;
+    justify-items: center;
+    grid-area: search;
+}
+.header__searchBar input {
+    width: 90%;
+    height: 30px;
+    padding: 5px;
+}
+.header__accountSettings {
+    display: flex;
+    align-self: center;
+    grid-area: account;
+}
+.header__accountSettings__icons {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    cursor: pointer;
+}
+.header__accountSettings div i{
+   font-size: 24px;
+}
+.header__accountSettings__account {
+    position: relative;
+}
+.header__accountSettings__account__hover {
+    position: absolute;
+    top: 40px;
+    width: 200px;
+    height: 203px;
+    border: 1px solid black;
+    background-color: red;
+}
+.header__accountSettings__trolley {
+    position: relative;
+}
+.header__accountSettings__trolley__hover {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(40px, auto);
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    width: 200px;
+    height: auto;
+    border: 1px solid black;
+    background-color: red;
+}
+.addedToTrolleyDropDown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-areas: "img title title removeItm";
+    grid-gap: 10px;
+    padding: 5px 15px;
+}
+.addedToTrolleyDropDown img {
+    max-width: 50px;
+    grid-area: img;
+}
+.addedToTrolleyDropDown h4 {
+    grid-area: title;
+}
+.addedToTrolleyDropDown button {
+    grid-area: removeItm;
+    max-height: 50px;
+}
+.header__accountSettings__wishlist {
+    position: relative;
+}
+.header__accountSettings__wishlist__hover {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    width: 200px;
+    height: 203px;
+    border: 1px solid black;
+    background-color: red;
+}
+.display {
+    display: none;
+}
+@media only screen and (max-width: 1150px) { 
+    header {
+        grid-template-columns: repeat(17, 1fr);
+        grid-template-areas: 
+        "logo search search search search search search search search search search search search account account account account "
+        "link link link link  link link link link  link link link link  link link link link  link";
+    }
+    .header__mainNav {
+        justify-content: start;
+    }
+}
+
+@media only screen and (max-width: 700px) { 
+    header {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: 
+        "logo link link account account "
+        "search search search search search";
+    }
+    .header__mainNav {
+        justify-content: start;
+    }
+}
