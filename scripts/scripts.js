@@ -52,19 +52,33 @@ const createHTML = array => {
     element.innerHTML = html;
     eventHandlers(array)
 }
-const updateTolleyHTML = () => {
+const updateTolleyHTML = (array) => {
     const trolleyhover = document.querySelector(".header__accountSettings__trolley__hover");
     let html = "";
-    for(let i = 0; i < trolley.length; i++){
+    for(let i = 0; i < array.length; i++){
       html += `<div class="addedToTrolleyDropDown">
-                  <img src="${trolley[i].image}">
-                  <h4>${trolley[i].title}</h4>
-                  <button>Remove</button>
-              </div>`
+                  <img src="${array[i].image}">
+                  <h4>${array[i].title}</h4>
+                  <button class="trolleyRemoveButton" id=${array[i].id}>Remove</button>
+              </div>`  
     }
-  
-    trolleyhover.innerHTML = html;
 
+    trolleyhover.innerHTML = html;  
+    removeItem();
+}
+
+
+
+const removeItemFromTolley = (id) => {
+    console.log(trolley)
+    for(let i = 0; i < trolley.length; i++){
+          if(trolley[i].id === id){
+                  trolley.splice(i, 1);
+          }
+    }
+    updateTrolleyCounter();
+    updateTolleyHTML(trolley);
+     
 }
 
 function getTelevision(){
@@ -94,6 +108,29 @@ const eventHandlers = (id) => {
   let hoverWishListDropDown = document.querySelector('.header__accountSettings__wishlist__hover');
   let hoverTrolleyIcon = document.querySelector('.header__accountSettings__trolley');
   let hoverTrolleyDropDown = document.querySelector('.header__accountSettings__trolley__hover');
+  let filterShowScreenSizeButton = document.querySelector('.storeFront__filter__showScreenSize');
+  let filterDropDownShowScreenSize = document.querySelector('.storeFront__filter__dropDown__showScreenSize');
+  let filterShowPriceButton = document.querySelector('.storeFront__filter__showPrice');
+  let filterDropDownShowPrice = document.querySelector('.storeFront__filter__dropDown__showPrice');
+  let filterShowResolutionButton = document.querySelector('.storeFront__filter__showResolution');
+  let filterDropDownShowResolution = document.querySelector('.storeFront__filter__dropDown__showResolution');
+  let filterShowBrandButton = document.querySelector('.storeFront__filter__showBrand');
+  let filterDropDownShowBrand = document.querySelector('.storeFront__filter__dropDown__showBrand');
+  let accountSettingsWishlistCounter = document.querySelector('.header__accountSettings__wishlist__counter');
+
+  filterShowScreenSizeButton.addEventListener('click', () => {
+    filterDropDownShowScreenSize.classList.toggle('display');
+  })
+  filterShowPriceButton.addEventListener('click', () => {
+    filterDropDownShowPrice.classList.toggle('display');
+  })
+  filterShowResolutionButton.addEventListener('click', () => {
+    filterDropDownShowResolution.classList.toggle('display');
+  })
+  filterShowBrandButton.addEventListener('click', () => {
+    filterDropDownShowBrand.classList.toggle('display');
+  })
+
 
   hoverAccountIcon.addEventListener('mouseover', () => {
       console.log("Account")
@@ -115,23 +152,32 @@ const eventHandlers = (id) => {
 
   hoverTrolleyIcon.addEventListener('mouseover', () => {
     console.log("Show what's in your trolley" + id);
-    hoverTrolleyDropDown.classList.remove("display");
+    trolley.length > 0? hoverTrolleyDropDown.classList.remove("display") : null;
   });
   hoverTrolleyIcon.addEventListener('mouseout', () => {
     hoverTrolleyDropDown.classList.add("display");
   });
+
   
 
-  console.log(addToTrolley.length);
+   console.log(addToTrolley.length);
+
 
   for(let i = 0; i < addToTrolley.length; i++){
       console.log(i)
       addToTrolley[i].addEventListener('click', (event) => {
           trolley.push(id[i]);
           console.log(trolley);
-          trolley.length > 0? updateTolleyHTML() : null;
+          trolley.length > 0? updateTolleyHTML(trolley) : null;
+          updateTrolleyCounter();
+
       })
-  }
+  } 
+
+
+
+
+
 
 
   for(let i = 0; i < addToFavourite.length; i++){
@@ -143,4 +189,31 @@ const eventHandlers = (id) => {
   }
 
 
+}
+
+
+const removeItem = () => {
+  let trolleyRemoveButton = document.querySelectorAll('.trolleyRemoveButton');
+  if(trolley.length > 0){
+    for(let i = 0; i < trolleyRemoveButton.length; i++){
+      trolleyRemoveButton[i].addEventListener('click', (e) => {
+            console.log(e.target.id);
+              removeItemFromTolley(e.target.id);
+      });
+    }
+  }
+
+}
+
+
+
+const updateTrolleyCounter = () => {
+  let accountSettingsTrolleyCounter = document.querySelector('.header__accountSettings__trolley__counter');
+  if(trolley.length > 0){
+    accountSettingsTrolleyCounter.classList.remove('display');
+    accountSettingsTrolleyCounter.innerHTML = `<div class="trolleyCounter">${trolley.length}</div>`;
+  } else if (trolley.length <= 0 )  {
+    accountSettingsTrolleyCounter.classList.add('display');
+    console.log("test2 true")
+  }
 }

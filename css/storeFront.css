@@ -166,6 +166,7 @@
     border: 1px solid black;
     border-radius: 3px;
     padding: 10px;
+    cursor: pointer;
 }
 .storeFront__productArea__pagination ul li:hover {
     background-color: rgb(242, 242, 242);

@@ -19,7 +19,7 @@
         <div id="header__logo"><img src="./img/logo.webp" alt="Logo Image"></div>
         <div class="header__mainNav">
             <ul>
-                <li>Shop</li>
+                <li>Shop <i class="fa fa-angle-down" aria-hidden="true"></i></li>
                 <li>New Range</li>
                 <li>Clearance</li>
             </ul>
@@ -33,10 +33,18 @@
                 <h5>Account</h5>
 
                 <div class="header__accountSettings__account__hover display">
-                    <p>Hover</p>
+                    <h3>Login</h3>
+                    <form>
+                        <input type="text" placeholder="User Name">
+                        <input type="password" placeholder="Password">
+                        <button type="submit">Login</button>
+                    </form>
                 </div>
             </div>
             <div class="header__accountSettings__wishlist header__accountSettings__icons">
+                <div class="header__accountSettings__wishlist__counter display">
+                    <p>1</p>
+                </div>
                 <i class="fa fa-heart" aria-hidden="true"></i>
                 <h5>Wishlist</h5>
 
@@ -45,6 +53,9 @@
                 </div>
             </div>
             <div class="header__accountSettings__trolley header__accountSettings__icons">
+                <div class="header__accountSettings__trolley__counter display">
+                    <p>1</p>
+                </div>
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 <h5>Trolley</h5>
 
@@ -74,8 +85,8 @@
                     <h3>Filter by</h3>
                 </div>
                 <div>
-                    <button>Screen size (in) <div><i class="fa fa-angle-down" aria-hidden="true"></i></div></button>
-                    <div class="storeFront__filter__dropDown"> 
+                    <button class="storeFront__filter__showScreenSize">Screen size (in) <div><i class="fa fa-angle-down" aria-hidden="true"></i></div></button>
+                    <div class="storeFront__filter__dropDown__showScreenSize display"> 
                         <label class="container">
                             <input type="checkbox" checked="checked">
                             One
@@ -94,14 +105,64 @@
                     </div>
                 </div>
                 <div>
-                    <button>Price <div><i class="fa fa-angle-down" aria-hidden="true"></i></div></button>
-                    
+                    <button class="storeFront__filter__showPrice">Price <div><i class="fa fa-angle-down" aria-hidden="true"></i></div></button>
+                    <div class="storeFront__filter__dropDown__showPrice display"> 
+                        <label class="container">
+                            <input type="checkbox" checked="checked">
+                            One
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox">
+                            Two
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox">
+                            Three
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>    
                 </div>
                 <div>
-                    <button>Resolution<div><i class="fa fa-angle-down" aria-hidden="true"></i></div></button>
+                    <button class="storeFront__filter__showResolution">Resolution<div><i class="fa fa-angle-down" aria-hidden="true"></i></div></button>
+                    <div class="storeFront__filter__dropDown__showResolution display"> 
+                        <label class="container">
+                            <input type="checkbox" checked="checked">
+                            One
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox">
+                            Two
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox">
+                            Three
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
                 </div>
                 <div>
-                    <button>Brands<div><i class="fa fa-angle-down" aria-hidden="true"></i></div></button>
+                    <button class="storeFront__filter__showBrand">Brands<div><i class="fa fa-angle-down" aria-hidden="true"></i></div></button>
+                    <div class="storeFront__filter__dropDown__showBrand display"> 
+                        <label class="container">
+                            <input type="checkbox" checked="checked">
+                            One
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox">
+                            Two
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox">
+                            Three
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
                 </div>
             </div>
             <div class="storeFront__productArea">

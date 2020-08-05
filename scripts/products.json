@@ -3,7 +3,7 @@
         "televisions": [
             {
                 "id": "1",
-                "title": "John",
+                "title": "TV1",
                 "image": "./img/image.jpg",
                 "customerRating": "4",
                 "price": "£100",
@@ -14,7 +14,7 @@
             },
             {
                 "id": "2",
-                "title": "Jez",
+                "title": "TV2",
                 "image": "./img/image.jpg",
                 "customerRating": "4",
                 "price": "£100",
@@ -25,7 +25,7 @@
             },
             {
                 "id": "3",
-                "title": "Jeff",
+                "title": "TV3",
                 "image": "./img/image.jpg",
                 "customerRating": "4",
                 "price": "£100",
@@ -36,7 +36,7 @@
             },
             {
                 "id": "4",
-                "title": "NameH",
+                "title": "TV4",
                 "image": "./img/image.jpg",
                 "customerRating": "4",
                 "price": "£100",
@@ -47,7 +47,7 @@
             },
             {
                 "id": "5",
-                "title": "NameH",
+                "title": "TV5",
                 "image": "./img/image.jpg",
                 "customerRating": "4",
                 "price": "£100",
@@ -58,7 +58,7 @@
             },
             {
                 "id": "6",
-                "title": "NameH",
+                "title": "TV6",
                 "image": "./img/image.jpg",
                 "customerRating": "4",
                 "price": "£100",
@@ -69,7 +69,7 @@
                 },
                 {
                     "id": "7",
-                    "title": "Name",
+                    "title": "TV7",
                     "image": "./img/image.jpg",
                     "customerRating": "4",
                     "price": "£100",
@@ -80,7 +80,7 @@
                 },
                 {
                     "id": "8",
-                    "title": "NameH",
+                    "title": "TV8",
                     "image": "./img/image.jpg",
                     "customerRating": "4",
                     "price": "£100",
@@ -91,7 +91,7 @@
                 },
                 {
                     "id": "9",
-                    "title": "NameH",
+                    "title": "TV9",
                     "image": "./img/image.jpg",
                     "customerRating": "4",
                     "price": "£100",
@@ -102,7 +102,7 @@
                 },
                 {
                     "id": "10",
-                    "title": "NameH",
+                    "title": "TV10",
                     "image": "./img/image.jpg",
                     "customerRating": "4",
                     "price": "£100",
@@ -113,7 +113,7 @@
                 },
                 {
                     "id": "11",
-                    "title": "NameH",
+                    "title": "TV11",
                     "image": "./img/image.jpg",
                     "customerRating": "4",
                     "price": "£100",
@@ -124,7 +124,7 @@
                 },
                 {
                     "id": "12",
-                    "title": "NameH",
+                    "title": "TV12",
                     "image": "./img/image.jpg",
                     "customerRating": "4",
                     "price": "£100",
