@@ -1,0 +1,25 @@
+.termsAndConditions {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+.termsAndConditions div {
+    grid-row-start: 2;
+}
+.termsAndConditions__wording {
+    grid-column-start: 2; 
+    grid-column-end: 7; 
+}
+.termsAndConditions__wording p {
+    margin-bottom: 10px;;
+}
+@media only screen and (max-width: 750px) { 
+    .termsAndConditions div {
+        grid-row-start: 1;
+    }
+    .termsAndConditions__wording {
+        padding: 10px;
+        grid-column-start: 1; 
+        grid-column-end: 7; 
+    }
+}

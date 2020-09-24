@@ -1,0 +1,75 @@
+.storeFront__productArea__filterButtonMobile {
+    grid-area: filterMobile;
+    display: none;
+    position: relative;
+}
+.storeFront__productArea__filterButtonMobile button {
+    cursor: pointer;
+    background-color: white;
+    color: #0c509f;
+    font-size: 20px;
+    border: 0px;
+
+}
+.storeFront__productArea__filterButtonMobile__active {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+.storeFront__productArea__filterButtonMobile__active_menu{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 80%;
+    max-width: 240px;
+    height: 100%;
+    z-index: 12;
+    background-color: white;
+}
+.closer{
+    cursor: pointer;
+    text-align: end;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.mobileFilterTwoColumns{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.storeFront__productArea__pageNumber p{
+    color: #737373;
+}
+.storeFront__filter__dropDown__showPrice__mobile {
+    display: grid;
+}
+.storeFront__filter__dropDown__showScreenSize__mobile{
+    display: grid;
+}
+.storeFront__filter__dropDown__showResolution__mobile{
+    display: grid;
+}
+.storeFront__productArea__filterButtonMobile__active_menu__options{
+    padding: 20px;
+}
+.storeFront__productArea__filterButtonMobile__active_menu__options button{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-items: left;
+    background-color: white;
+    border: none;
+    color: #0c509f;
+    font-size: 20px;
+    align-items: center;
+    cursor: pointer;
+    margin: 20px 0px;
+}
+.storeFront__productArea__filterButtonMobile__active_menu__options button div{
+    text-align: end;
+}

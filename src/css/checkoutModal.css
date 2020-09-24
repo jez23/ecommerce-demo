@@ -1,0 +1,70 @@
+.checkoutModal{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+}
+.checkoutModal__container{
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: 
+        ". titleCheck titleCheck titleCheck titleCheck titleCheck titleCheck . "
+        ". checkProducts checkProducts checkProducts checkProducts checkProducts checkProducts ."
+        ". buyButton buyButton buyButton buyButton buyButton buyButton .";
+    overflow: auto;
+    z-index: 100;
+}
+.titleCheck{
+    grid-area: titleCheck;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    align-self: center;
+    padding: 40px 0px 20px 0px;
+}
+.titleCheck h3{
+    display: grid;
+    grid-column: 1 / span 8;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.titleCheck i{
+    display: grid;
+    grid-column: 9 / span 2;
+    justify-content: end;
+    font-size: 30px;
+    cursor: pointer;
+}
+.checkProducts{
+    grid-area: checkProducts;
+}
+.checkProducts .subTotal {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+}
+.checkProducts .trolleyRemoveButton {
+    cursor: pointer;
+}
+.buyButton{
+    grid-area: buyButton;
+    text-align: center;
+    padding: 20px 0px 50px 0px;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .checkoutModal__container{
+        width: 100%;
+        height: 100%;
+        overflow: scroll;  
+        margin-top: 0px;
+    }
+}

@@ -1,0 +1,29 @@
+.breadcrumb {
+    margin-bottom: 40px;
+    grid-template-columns: repeat(12, 1fr);
+    display: grid;
+    max-width: 2000px;
+    margin: 20px auto;
+}
+.breadcrumb ul {
+    grid-column: 2 / span 10;
+}
+.breadcrumb ul li {
+    list-style: none;
+    display: inline;
+    cursor: pointer;
+}
+.acconcement h3 {
+    font-size: 16px;
+}
+.breadcrumb ul li:before {    
+    font-family: 'FontAwesome';
+    content: '\f104';
+    margin:0 15px 0 5px;
+    color: black;
+}
+@media only screen and (max-width: 750px) { 
+    .breadcrumb {
+        display: none;
+    }
+}
