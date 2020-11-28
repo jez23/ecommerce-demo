@@ -24,7 +24,6 @@ const globalStateObject  = {
     },
     addToFavourites(product){
         globalStateObject.favourites = [...globalStateObject.favourites, product];
-        console.log(globalStateObject)
     },
     removeFromFavourites(product){
         const remove = globalStateObject.favourites.findIndex((productInFavourites) => {

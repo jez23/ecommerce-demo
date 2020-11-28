@@ -4,6 +4,7 @@ import upDateTrolleyCounter from './updateTrolleyCounter.js';
 
 /* Adds items to the basket list */
 /* VIEW */
+
 const updateFavouritesTrolleyHTML = () => {
    
   let hoverFav = document.querySelector(".header__accountSettings__wishlist__hover");
@@ -19,7 +20,6 @@ const updateFavouritesTrolleyHTML = () => {
           starsHTML += `<i class="fa fa-star-o" aria-hidden="true"></i>`
       }
     
-      console.log(product)
       const addedToTrolleyDropDown = document.createElement('div');
       addedToTrolleyDropDown.classList.add('addedToTrolleyDropDown');
       hoverFav.appendChild(addedToTrolleyDropDown);

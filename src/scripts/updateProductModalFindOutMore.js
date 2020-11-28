@@ -4,7 +4,8 @@ import updateTrolleyCounter from './updateTrolleyCounter.js';
 import updateFavouritesTrolleyHTML from './updateFavouritesTrolleyHTML.js';
 
 const updateProductModalFindOutMore = (currentProductInModal) => {
-  
+    const productMoreInfoModalContainer = document.querySelector('.productMoreInfoModal__container');
+    const productMoreInfoModal = document.querySelector('.productMoreInfoModal');
     const productMoreInfoModalTitleH3 = document.querySelector('.productMoreInfoModal__title_h3');
     const productMoreInfoModalPrice = document.querySelector('.productMoreInfoModal__price');
     const productMoreInfoModalImage = document.querySelector('.productMoreInfoModal__image');
@@ -28,7 +29,7 @@ const updateProductModalFindOutMore = (currentProductInModal) => {
     favourite.classList.add('btn');
     favourite.classList.add('favourite');
     favourite.classList.add('favouriteModel');
-    favourite.innerHTML = `<i class="fa fa-heart" aria-hidden="true"></i> Add Favourites`;
+    favourite.innerHTML = `<i class="fa fa-heart" aria-hidden="true"></i> Add To Favourites`;
 
     productMoreInfoModalPrice.append(add, favourite);
 
@@ -36,11 +37,29 @@ const updateProductModalFindOutMore = (currentProductInModal) => {
         globalStateObject.addToTrolley(currentProductInModal[0]);
         updateTrolletHTML();
         updateTrolleyCounter("trolley");
+        add.innerHTML = `<i class="fa fa-shopping-cart" aria-hidden="true"></i> Item Added`;
+        add.style.backgroundColor = "blue";
+        setTimeout(() => {
+          add.style.backgroundColor = "green"
+            add.innerHTML = `<i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Trolley`
+        }, 1500)
     }
     favourite.onclick = () => {
         globalStateObject.addToFavourites(currentProductInModal[0]);
         updateFavouritesTrolleyHTML();
         updateTrolleyCounter("favourites");
+        favourite.innerHTML =  `<i class="fa fa-heart" aria-hidden="true"></i> Item Added`;
+        favourite.style.backgroundColor = "blue";
+        setTimeout(() => {
+            favourite.style.backgroundColor = "white"
+            favourite.innerHTML =  `<i class="fa fa-heart" aria-hidden="true"></i> Add To Favourites`
+        }, 1500)
+    }
+    productMoreInfoModal.onclick = (e) => {
+        productMoreInfoModal.classList.add('display');
+    }
+    productMoreInfoModalContainer.onclick = (e) => {
+        e.stopPropagation();
     }
    
     thumbNail1.innerHTML = `<img src="${currentProductInModal[0].image}" alt="${currentProductInModal[0].title}">`;

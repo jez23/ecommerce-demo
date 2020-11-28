@@ -8,11 +8,16 @@ const createHTML = (arrayToDisplay) => {
   const productArea = document.querySelector(".storeFront__productArea__products");
   const  breadcrumbName =  document.querySelector('.breadcrumb__name');
   const productTitle = document.querySelector('#productTitle');
+  const numberOfProducts = document.querySelector('#numberOfProducts');
+
   productArea.innerHTML = '';
 
   if(arrayToDisplay.length > 0){
-
+      numberOfProducts.textContent = `Showing ${arrayToDisplay.length} products`
+     
     arrayToDisplay.forEach(function(product) {
+      breadcrumbName.textContent = `${product.type}`
+      productTitle.innerHTML = `${product.type}`
       let starsHTML = ''
         for(let i = 0; i < product.stars; i++){
           starsHTML += `<i class="fa fa-star-o" aria-hidden="true"></i>`
@@ -31,6 +36,7 @@ const createHTML = (arrayToDisplay) => {
          description.classList.add('storeFront__productArea__products__product__description');
 
          productDiv.append(img, description);
+
 
          let title = document.createElement('h3');
          title.classList.add('storeFront__productArea__products__product__title');
@@ -71,17 +77,31 @@ const createHTML = (arrayToDisplay) => {
          productDiv.onclick = () => {
               product.addCurrentlySelectedItem(product)
          }
+
+
          add.onclick = (e) => {
               e.stopPropagation();
               product.addToTrolley(product);
               updateTrolleyHTML("trolley");
               updateTrolleyCounter("trolley");
+              add.innerHTML = `<i class="fa fa-shopping-cart" aria-hidden="true"></i> Item Added`;
+              add.style.backgroundColor = "blue";
+              setTimeout(() => {
+                add.style.backgroundColor = "green"
+                  add.innerHTML = `<i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Trolley`
+              }, 1500)
          }
          favourite.onclick = (e) => {
               e.stopPropagation();
               product.addToFavourites(product);
               updateFavouritesTrolleyHTML();
               updateTrolleyCounter("favourites");
+              favourite.innerHTML =  `<i class="fa fa-plus" aria-hidden="true"></i>`;
+              favourite.style.backgroundColor = "blue";
+              setTimeout(() => {
+                  favourite.style.backgroundColor = "white"
+                  favourite.innerHTML =  `<i class="fa fa-heart" aria-hidden="true"></i>`
+              }, 1500)
          }
 
     });
@@ -90,7 +110,7 @@ const createHTML = (arrayToDisplay) => {
   } else{
       productTitle.textContent = `No products found`;
       breadcrumbName.textContent = `No Products`;
-      const numberOfProducts = document.querySelector('#numberOfProducts');
+     
       numberOfProducts.textContent = `Showing ${arrayToDisplay.length} products`
       productArea.innerHTML = `<h2>No products found matching those filter settings</h2>`;
   }

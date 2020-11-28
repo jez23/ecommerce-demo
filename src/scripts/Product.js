@@ -16,16 +16,12 @@ const Product = class Product {
 
     addToTrolley(product){
         globalStateObject.trolley = [...globalStateObject.trolley, product];
-        console.log('Done:' + globalStateObject)
     };
     addToFavourites(product){
         globalStateObject.favourites = [...globalStateObject.favourites, product];
-        console.log('Done:' + globalStateObject)
     };
     addCurrentlySelectedItem(product){
-
         globalStateObject.currentlySelectedItem = [product];
-        console.log("added")
     }
 }
 
